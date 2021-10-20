@@ -101,9 +101,7 @@ jobs:
   notify:
     name: Slack Notifications
     runs-on: ubuntu-latest
-    {% raw -%}
     if: ${{ failure() }}
-    {%- endraw %}
     needs:
       - pull-request
     steps:
